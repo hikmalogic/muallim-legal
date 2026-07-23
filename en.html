@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muallim — Privacy Policy</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a2b24;
+      background: #f7faf8;
+    }
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+    }
+    header {
+      border-bottom: 3px solid #064E3B;
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+    }
+    .lang { float: right; font-size: 14px; }
+    .lang a { color: #064E3B; }
+    h1 { font-size: 26px; margin: 8px 0 4px; color: #064E3B; }
+    .meta { color: #5b6d64; font-size: 14px; margin: 0; }
+    h2 { font-size: 19px; margin-top: 32px; color: #064E3B; }
+    table { border-collapse: collapse; width: 100%; font-size: 15px; }
+    th, td { border: 1px solid #cfe0d8; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #eaf3ef; }
+    ul { padding-left: 22px; }
+    a { color: #0a6e54; }
+    footer { margin-top: 48px; font-size: 14px; color: #5b6d64; border-top: 1px solid #cfe0d8; padding-top: 16px; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <span class="lang"><a href="index.html">Русская версия</a></span>
+    <h1>Muallim — Privacy Policy</h1>
+    <p class="meta">Effective date: July 23, 2026</p>
+  </header>
+
+  <p>Muallim is a mobile app for practicing spoken Modern Standard Arabic
+  (fusha) with an AI teacher. The app is developed and maintained by an
+  individual developer ("we", "the developer"). This page describes what
+  data the app processes and how it is used.</p>
+
+  <h2>1. Data we collect</h2>
+  <table>
+    <tr><th>Data</th><th>Purpose</th><th>Where it is stored</th></tr>
+    <tr>
+      <td>Email address and password</td>
+      <td>Account registration and sign-in (authentication)</td>
+      <td>Supabase (the password is stored only as a cryptographic hash)</td>
+    </tr>
+    <tr>
+      <td>Display name (optional) and selected language level</td>
+      <td>Lesson personalization</td>
+      <td>Supabase</td>
+    </tr>
+    <tr>
+      <td>Your voice during conversations with the AI teacher</td>
+      <td>Real-time speech recognition and the teacher's reply</td>
+      <td>Streamed to processing providers in real time (see section 2); we do not store audio recordings</td>
+    </tr>
+    <tr>
+      <td>Text transcripts of conversations and learning progress</td>
+      <td>Lesson history, progress tracking, better personalization</td>
+      <td>Supabase</td>
+    </tr>
+  </table>
+
+  <h2>2. Voice processing by third-party providers</h2>
+  <p>Voice dialogue is the core of the app. When you speak with the AI
+  teacher, your voice audio is streamed in real time to the following
+  providers:</p>
+  <ul>
+    <li><strong>Deepgram</strong> — speech recognition (voice → text);</li>
+    <li><strong>Google Gemini</strong> — generation of the teacher's reply (text → text);</li>
+    <li><strong>ElevenLabs</strong> and/or <strong>Microsoft Azure</strong> — the teacher's speech synthesis (text → voice).</li>
+  </ul>
+  <p>Each provider processes data under its own privacy policy. We send them
+  only what is required for the dialogue to work, and we never share your
+  email or other account data with them.</p>
+
+  <h2>3. Where data is stored</h2>
+  <p>Accounts, transcripts and learning progress are stored in a Supabase
+  database hosted in the Singapore region. All data is transferred over
+  encrypted connections (HTTPS/TLS).</p>
+
+  <h2>4. What we do not do</h2>
+  <ul>
+    <li>We <strong>do not sell</strong> your data or share it with third parties for advertising.</li>
+    <li>We do not show ads and do not use advertising trackers.</li>
+    <li>We do not collect any data beyond what is listed in section 1.</li>
+  </ul>
+
+  <h2>5. Account and data deletion</h2>
+  <p>To delete your account and all associated data (profile, transcripts,
+  progress), email us from the address your account is registered with at
+  the contact email below. We will delete the data within a reasonable time
+  (no more than 30 days) and confirm the deletion by reply.</p>
+
+  <h2>6. Children</h2>
+  <p>The app is not intended for unsupervised use by children under 13.</p>
+
+  <h2>7. Changes to this policy</h2>
+  <p>If this policy changes, we will update this page and the effective
+  date. Material changes will additionally be announced in the app.</p>
+
+  <h2>8. Contact</h2>
+  <p>For privacy questions and data deletion requests:
+  <strong>hikmalogic@gmail.com</strong></p>
+
+  <footer>
+    Muallim — AI Arabic (fusha) teacher · Individual developer ·
+    <a href="index.html">Русская версия</a>
+  </footer>
+</div>
+</body>
+</html>
