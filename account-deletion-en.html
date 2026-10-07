@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muallim — Account deletion</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a2b24;
+      background: #f7faf8;
+    }
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+    }
+    header {
+      border-bottom: 3px solid #064E3B;
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+    }
+    .lang { float: right; font-size: 14px; }
+    .lang a { color: #064E3B; }
+    h1 { font-size: 26px; margin: 8px 0 4px; color: #064E3B; }
+    .meta { color: #5b6d64; font-size: 14px; margin: 0; }
+    h2 { font-size: 19px; margin-top: 32px; color: #064E3B; }
+    ul, ol { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    a { color: #0a6e54; }
+    .note { background: #eaf3ef; border-radius: 8px; padding: 12px 14px; }
+    footer { margin-top: 48px; font-size: 14px; color: #5b6d64; border-top: 1px solid #cfe0d8; padding-top: 16px; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <span class="lang"><a href="account-deletion.html">Русская версия</a></span>
+    <h1>Account and data deletion</h1>
+    <p class="meta">The “Muallim — учитель арабского” app on Google Play and “Mudarris” on the App Store ·
+    developer hikmalogic (individual developer) · revised October 3, 2026</p>
+  </header>
+
+  <h2>1. Delete in the app</h2>
+  <p>The app interface is in Russian; button labels are given in quotes with a translation.</p>
+  <ol>
+    <li>Open the «Профиль» (Profile) tab and tap «Удалить аккаунт…» (Delete account…).</li>
+    <li>Read what will be deleted and what will be kept.</li>
+    <li>Enter your account password and the word <strong>УДАЛИТЬ</strong> (DELETE).</li>
+    <li>Tap «Удалить аккаунт навсегда» (Delete account permanently).</li>
+  </ol>
+  <p>Your account and data are deleted immediately; the app shows «Аккаунт удалён»
+  (Account deleted) and returns to the sign-in screen. A deleted account cannot be restored.</p>
+  <p>If the connection drops during deletion, the app tells you that the result is unknown.
+  Repeat the deletion once you are back online — repeating is safe; the app will also re-check
+  the result on its next launch. If you can no longer sign in to the account, it has been
+  deleted. If the app cannot check the result, clear the app’s data in your phone settings (or
+  delete the app) — this also erases the progress saved on the device.</p>
+
+  <h2>2. Delete without the app — by email</h2>
+  <p>This also works if you do not remember your password.</p>
+  <ol>
+    <li>Email <strong>hikmalogic@gmail.com</strong> from the address your account is registered
+    with, subject “Account deletion”.</li>
+    <li>We will reply to the account address with a confirmation code. Send it back in your reply —
+    this proves the request comes from the owner of the address. We do not accept requests sent
+    from other addresses: please write from your account address.</li>
+    <li>We will delete the account the same way the app does, no later than 30 days after your
+    email with the code, and confirm the deletion by reply.</li>
+  </ol>
+  <p>We keep deletion correspondence for no longer than 30 days after our reply.</p>
+
+  <h2>3. What is deleted</h2>
+  <ul>
+    <li>the account: email address, password (stored only as a cryptographic hash), display name
+    and language level;</li>
+    <li>learning and vocabulary progress;</li>
+    <li>exercise answers, transcripts of voice lessons with the teacher, and the teacher’s notes about you;</li>
+    <li>your reports about errors in the learning materials;</li>
+    <li>minutes: the balance, top-ups and session history — without a refund;</li>
+    <li>records of activation code attempts made with your address (the address is stored there as a hash);</li>
+    <li>sign-in records in the authentication service log;</li>
+    <li>on the device where you deleted the account — saved progress and the signed-in session.</li>
+  </ul>
+
+  <h2>4. What is kept and why</h2>
+  <ul>
+    <li>Redeemed activation codes stay redeemed so that they cannot be entered again; their link to
+    you is removed.</li>
+    <li>An anonymized record that a deletion happened: the date, the method (in the app or by
+    email) and counts of what was deleted — with no address or account number.</li>
+    <li>Other devices where you signed in, and device backups (Google, iCloud), keep a copy of the
+    progress until you delete the app or its data there. Sign-in on those devices stops working.</li>
+    <li>Logs of the voice teacher server (they may contain lesson utterances with the account number,
+    but no email address) are not cleared immediately: they are overwritten as they fill up.</li>
+    <li>Technical logs of the hosting platform (Supabase) are kept for the period set by the provider.
+    We do not make separate database backups.</li>
+  </ul>
+
+  <h2>5. What was shared with services and stays with them</h2>
+  <ul>
+    <li><strong>LiveKit</strong> (voice connection): during a conversation, audio and the text of
+    utterances pass through it in real time; the account number, room names and session metadata,
+    including the teacher’s notes, stay with LiveKit under its rules.</li>
+    <li>Speech recognition and synthesis services (<strong>Deepgram</strong>, <strong>Microsoft Azure</strong>,
+    <strong>ElevenLabs</strong>; <strong>Groq</strong> if speech recognition through it is enabled),
+    pronunciation assessment (<strong>Microsoft Azure</strong> — voice
+    recordings from exercises), the teacher’s replies and exercise checking (<strong>Google Gemini</strong> —
+    utterances, exercise answers, the teacher’s notes) — under those services’ rules. Your email
+    address is never sent to them. During a conversation, audio is streamed in real time.</li>
+  </ul>
+
+  <h2>6. Purchases and subscriptions</h2>
+  <p class="note">If you bought minutes or a subscription through the App Store, Google Play or a
+  payment service (for example, an activation code), the purchase history is kept by them under
+  their rules — we cannot delete it. Deleting your account does not cancel a store subscription:
+  cancel it in the App Store or Google Play settings.</p>
+
+  <h2>7. Contact</h2>
+  <p>Questions about deletion and data: <strong>hikmalogic@gmail.com</strong>.
+  How we process data — see the <a href="en.html">privacy policy</a>.</p>
+
+  <footer>
+    Muallim — AI Arabic (fusha) teacher · Individual developer ·
+    <a href="en.html">Privacy policy</a> ·
+    <a href="account-deletion.html">Русская версия</a>
+  </footer>
+</div>
+</body>
+</html>
